@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project3</RootNamespace>
+    <AssemblyName>Project3</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3BD30804-A412-41B9-A9DD-D798927D51F2}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Animation.cs" />
+    <Compile Include="Class\Background.cs" />
+    <Compile Include="Class\Managers\AnimationManager.cs" />
+    <Compile Include="Class\Global.cs" />
+    <Compile Include="Class\Managers\GameManager.cs" />
+    <Compile Include="Class\Managers\InputManager.cs" />
+    <Compile Include="Class\Test\Keypad.cs" />
+    <Compile Include="Class\Player.cs" />
+    <Compile Include="Class\Test\Screen.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\attack_circular_fire.png" />
+    <Content Include="Content\attack_earth.png" />
+    <Content Include="Content\attack_fire.png" />
+    <Content Include="Content\attack_ice.png" />
+    <Content Include="Content\attack_lava.png" />
+    <Content Include="Content\attack_power_sword.png" />
+    <Content Include="Content\attack_stone.png" />
+    <Content Include="Content\attack_sword.png" />
+    <Content Include="Content\attack_thunder.png" />
+    <Content Include="Content\attack_thunder1.png" />
+    <Content Include="Content\attack_water.png" />
+    <Content Include="Content\attack_wind.png" />
+    <Content Include="Content\class_archer_female.png" />
+    <Content Include="Content\class_archer_male.png" />
+    <Content Include="Content\class_knight_female.png" />
+    <Content Include="Content\class_knight_male.png" />
+    <Content Include="Content\class_mage_female.png" />
+    <Content Include="Content\class_mage_male.png" />
+    <Content Include="Content\class_squire_female.png" />
+    <Content Include="Content\class_squire_male.png" />
+    <Content Include="Content\class_undefined.png" />
+    <Content Include="Content\class_wizzard_female.png" />
+    <Content Include="Content\class_wizzard_male.png" />
+    <Content Include="Content\cure.png" />
+    <Content Include="Content\dagger.png" />
+    <Content Include="Content\effect_burn.png" />
+    <Content Include="Content\effect_cold.png" />
+    <Content Include="Content\effect_dirty.png" />
+    <Content Include="Content\effect_electrification.png" />
+    <Content Include="Content\effect_heat.png" />
+    <Content Include="Content\effect_petrification.png" />
+    <Content Include="Content\effect_wet.png" />
+    <Content Include="Content\element_diagram.png" />
+    <Content Include="Content\fire0001.jpg" />
+    <Content Include="Content\ground.jpg" />
+    <Content Include="Content\hud_large.png" />
+    <Content Include="Content\hud_large_2.png" />
+    <Content Include="Content\hud_large_old.png" />
+    <Content Include="Content\hud_spell_empty.png" />
+    <Content Include="Content\hud_spell_empty1.png" />
+    <Content Include="Content\icon_arrow.png" />
+    <Content Include="Content\icon_arrow_fire.png" />
+    <Content Include="Content\icon_arrow_piercing.png" />
+    <Content Include="Content\icon_arrow_tri.png" />
+    <Content Include="Content\icon_blocked.png" />
+    <Content Include="Content\icon_cure.png" />
+    <Content Include="Content\icon_damage_transfer.png" />
+    <Content Include="Content\icon_ghost_blade.png" />
+    <Content Include="Content\icon_phanton_blade.png" />
+    <Content Include="Content\icon_power_sword.png" />
+    <Content Include="Content\icon_rapid_blade.png" />
+    <Content Include="Content\icon_rod_earth.png" />
+    <Content Include="Content\icon_rod_eletric.png" />
+    <Content Include="Content\icon_rod_fire.png" />
+    <Content Include="Content\icon_rod_ice.png" />
+    <Content Include="Content\icon_rod_stone.png" />
+    <Content Include="Content\icon_rod_vulcano.png" />
+    <Content Include="Content\icon_rod_water.png" />
+    <Content Include="Content\icon_rod_wind.png" />
+    <Content Include="Content\icon_shield_reflect.png" />
+    <Content Include="Content\icon_shield_reinforce.png" />
+    <Content Include="Content\icon_spear.png" />
+    <Content Include="Content\icon_sword_reinforce.png" />
+    <Content Include="Content\knight_female_face.png" />
+    <Content Include="Content\knight_male_face.png" />
+    <Content Include="Content\rod.png" />
+    <Content Include="Content\shield_1.png" />
+    <Content Include="Content\shield_2.png" />
+    <Content Include="Content\shield_magic.png" />
+    <Content Include="Content\shield_magic_1.png" />
+    <Content Include="Content\shield_undenfined.png" />
+    <Content Include="Content\skill_damage_transfer.png" />
+    <Content Include="Content\sword_1.png" />
+    <Content Include="Content\sword_2.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.WindowsUniversal" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_circular_fire.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_earth.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_fire.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_ice.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_lava.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_power_sword.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_stone.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_sword.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_thunder.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_thunder1.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_water.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\attack_wind.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_archer_female.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_archer_male.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_knight_female.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_knight_male.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_mage_female.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_mage_male.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_squire_female.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_squire_male.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_undefined.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_wizzard_female.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\class_wizzard_male.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\cure.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\dagger.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_burn.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_cold.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_dirty.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_electrification.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_heat.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_petrification.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\effect_wet.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\element_diagram.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\fire0001.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\ground.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\hud_large.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\hud_large_2.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\hud_large_old.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\hud_spell_empty.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\hud_spell_empty1.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_arrow.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_arrow_fire.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_arrow_piercing.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_arrow_tri.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_blocked.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_cure.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_damage_transfer.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_ghost_blade.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_phanton_blade.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_power_sword.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rapid_blade.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_earth.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_eletric.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_fire.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_ice.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_stone.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_vulcano.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_water.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_rod_wind.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_shield_reflect.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_shield_reinforce.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_spear.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\icon_sword_reinforce.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\knight_female_face.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\knight_male_face.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\rod.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\shield_1.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\shield_2.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\shield_magic.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\shield_magic_1.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\shield_undenfined.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\skill_damage_transfer.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\sword_1.xnb" />
+    <None Include="Content\bin\WindowsStoreApp\Content\sword_2.xnb" />
+    <None Include="Content\Content.mgcb" />
+    <None Include="Content\obj\WindowsStoreApp\Content\.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\.mgstats" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_circular_fire.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_earth.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_fire.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_ice.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_lava.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_power_sword.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_stone.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_sword.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_thunder.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_thunder1.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_water.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\attack_wind.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_archer_female.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_archer_male.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_knight_female.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_knight_male.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_mage_female.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_mage_male.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_squire_female.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_squire_male.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_undefined.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_wizzard_female.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\class_wizzard_male.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\cure.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\dagger.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_burn.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_cold.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_dirty.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_electrification.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_heat.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_petrification.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\effect_wet.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\element_diagram.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\fire0001.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\ground.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\hud_large.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\hud_large_2.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\hud_large_old.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\hud_spell_empty.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\hud_spell_empty1.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_arrow.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_arrow_fire.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_arrow_piercing.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_arrow_tri.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_blocked.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_cure.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_damage_transfer.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_ghost_blade.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_phanton_blade.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_power_sword.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rapid_blade.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_earth.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_eletric.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_fire.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_ice.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_stone.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_vulcano.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_water.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_rod_wind.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_shield_reflect.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_shield_reinforce.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_spear.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\icon_sword_reinforce.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\knight_female_face.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\knight_male_face.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\rod.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\shield_1.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\shield_2.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\shield_magic.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\shield_magic_1.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\shield_undenfined.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\skill_damage_transfer.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\sword_1.mgcontent" />
+    <None Include="Content\obj\WindowsStoreApp\Content\sword_2.mgcontent" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
