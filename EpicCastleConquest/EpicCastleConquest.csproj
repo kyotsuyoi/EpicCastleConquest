@@ -290,7 +290,7 @@
     <None Include="Content\bin\WindowsStoreApp\Content\skill_damage_transfer.xnb" />
     <None Include="Content\bin\WindowsStoreApp\Content\sword_1.xnb" />
     <None Include="Content\bin\WindowsStoreApp\Content\sword_2.xnb" />
-    <None Include="Content\Content.mgcb" />
+    <None Include="Content\1-Content.mgcb" />
     <None Include="Content\obj\WindowsStoreApp\Content\.mgcontent" />
     <None Include="Content\obj\WindowsStoreApp\Content\.mgstats" />
     <None Include="Content\obj\WindowsStoreApp\Content\attack_circular_fire.mgcontent" />
